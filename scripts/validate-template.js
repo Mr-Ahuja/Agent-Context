@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 function fail(m){ console.error('ERROR:', m); process.exitCode = 1; }
 function ok(m){ console.log('OK:', m); }
-function loadJson(p){ try{ let s = fs.readFileSync(p,'utf8'); s = s.replace(/^\uFEFF/, ''); return JSON.parse(s); } catch(e){ fail('Cannot read JSON: ' + p + ' -> ' + e.message); return null; } } catch(e){ fail('Cannot read JSON: ' + p + ' -> ' + e.message); return null; } }
+function loadJson(p){ try{ let s = fs.readFileSync(p,'utf8'); if (s.charCodeAt(0) === 0xFEFF) s = s.slice(1); return JSON.parse(s); } catch(e){ fail('Cannot read JSON: ' + p + ' -> ' + e.message); return null; } }
 (function(){
   const root = process.cwd();
   const schemaPath = path.resolve(root, 'schema/context.manifest.json');
@@ -28,7 +28,6 @@ function loadJson(p){ try{ let s = fs.readFileSync(p,'utf8'); s = s.replace(/^\u
       if (typ==='array'){ if (!Array.isArray(v) || !v.length){ fail('entries.' + k + ' must be array'); continue; } v.forEach(function(f){ const p=path.resolve(troot,f); if(!fs.existsSync(p)) fail('entries.' + k + ' missing file: ' + f); else ok('entries.' + k + ': ' + f); }); }
       else { const p=path.resolve(troot,v); if(!fs.existsSync(p)) fail('entries.' + k + ' missing file: ' + v); else ok('entries.' + k + ': ' + v); }
     }
-    // MIGRATION tip
     const mig = path.resolve(troot, 'MIGRATION.md'); if (!fs.existsSync(mig)) ok('tip: MIGRATION.md not found (recommended)');
   }
 })();
