@@ -1,8 +1,10 @@
 ﻿{
-  "name": "agent-context",
-  "private": true,
-  "version": "0.1.0",
-  "scripts": { "validate": "node scripts/validate-template.js" ,  "new:coframe": "node scripts/new-coframe.js",  "register:coframe": "node scripts/register-coframe.js" }
+    "name":  "agent-context",
+    "private":  true,
+    "version":  "0.1.0",
+    "scripts":  {
+                    "validate":  "node scripts/validate-template.js",
+                    "new:coframe":  "node scripts/new-coframe.js",
+                    "register:coframe":  "node scripts/register-coframe.js"
+                }
 }
-
-

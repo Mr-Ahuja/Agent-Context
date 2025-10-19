@@ -90,3 +90,9 @@ A pragmatic, LLM‑friendly way to standardize UI/UX and dev practices across ap
 - Prompt: coframes/CONSTRUCTOR-PROMPT.md
 - After creation: register under schema/context.manifest.json and validate with npm run validate
 
+### Co-Frame CLI
+- Create new: npm run new:coframe -- --name "My-Co-Frame" --scope "Domain"
+- Register existing: npm run register:coframe -- --name "My-Co-Frame" --path coframes/My-Co-Frame/coframe.manifest.json
+### Template & Project CLI
+- New template: npm run new:template -- --name "My-Template" --coframe "Project-Macro-Applications" [--from "The-Chosen-One"]
+- New project: npm run new:project -- --name "My-Project" --template "The-Chosen-One"
