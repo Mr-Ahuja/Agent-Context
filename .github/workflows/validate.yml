@@ -1,12 +1,32 @@
 name: Validate Templates
 
-on:\n  push:\n    branches: [ main ]\n    paths:\n      - 'templates/**'\n      - 'coframes/**'\n      - 'schema/**'\n      - 'shared/**'\n      - 'scripts/validate-template.js'\n      - 'package.json'\n  pull_request:\n    branches: [ main ]\n    paths:\n      - 'templates/**'\n      - 'coframes/**'\n      - 'schema/**'\n      - 'shared/**'\n      - 'scripts/validate-template.js'\n      - 'package.json'\n\njobs:
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - "templates/**"
+      - "coframes/**"
+      - "schema/**"
+      - "shared/**"
+      - "scripts/validate-template.js"
+      - "package.json"
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "templates/**"
+      - "coframes/**"
+      - "schema/**"
+      - "shared/**"
+      - "scripts/validate-template.js"
+      - "package.json"
+
+jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
       - run: npm run validate
-
