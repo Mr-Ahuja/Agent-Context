@@ -1,4 +1,6 @@
-# Agent-Context (Co-Frame • Template • Project)\n\n[![Deploy Pages](https://github.com/Mr-Ahuja/Agent-Context/actions/workflows/pages.yml/badge.svg)](https://github.com/Mr-Ahuja/Agent-Context/actions/workflows/pages.yml)\n\n
+# Agent-Context (Co-Frame • Template • Project)
+[![Deploy Pages](https://github.com/Mr-Ahuja/Agent-Context/actions/workflows/pages.yml/badge.svg)](https://github.com/Mr-Ahuja/Agent-Context/actions/workflows/pages.yml)
+
 A pragmatic, LLM‑friendly way to standardize UI/UX and dev practices across apps. It encodes your design system and operating rules so future projects inherit the same aesthetic, structure, and deployment playbook — with room for small, safe overrides.
 
 ## What
