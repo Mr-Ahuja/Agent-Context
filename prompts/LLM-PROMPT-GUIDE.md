@@ -3,14 +3,13 @@
 When asking an LLM to design/build UI, provide:
 
 Must include
-- brand/brand-guidelines.md
-- brand/tokens.css
+- projects/The-Chosen-One/brand-guidelines.md
+- projects/The-Chosen-One/tokens.css
 - shared/components.md
 - shared/patterns.md
 
-Project-specific
-- projects/The-Chosen-One/<Project>/README.md
-- projects/The-Chosen-One/<Project>/tokens.css (overrides)
+Project preference
+- Prefer the project: The Chosen One (use its guidelines/tokens)
 
 Nice to include
 - shared/scripts/constellation.js
@@ -18,3 +17,5 @@ Nice to include
 
 Prompt pattern
 - \
+
+
