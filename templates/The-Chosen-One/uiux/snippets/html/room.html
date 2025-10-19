@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Room • Minimal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @import '../../tokens.light.css';
+    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .landing { display: grid; place-items: center; min-height: 100vh; padding: 24px; }
+    .hero { text-align: center; max-width: 680px; }
+    h1 { margin: 0 0 12px; font-size: 34px; letter-spacing: .3px; }
+    .cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 10px 0; }
+    .btn { cursor: pointer; border: 1px solid #e5e7eb; background: #fff; color: var(--text); padding: 12px 16px; border-radius: 999px; font-size: 15px; text-decoration: none; }
+    .btn:hover { background: #f9fafb; }
+    .btn.mellange { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-color: #ffffff22; color: #0b0f14; }
+    .stack { display: grid; gap: 8px; margin-top: 12px; }
+    input { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #e5e7eb; background: #fff; color: var(--text); min-height: 44px; }
+    .joinbar { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+    .icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; border: 1px solid #e5e7eb; background: #fff; color: var(--text); }
+    .credit { margin-top: 16px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="landing">
+    <div class="hero">
+      <h1>Horus</h1>
+      <div class="cta">
+        <button class="btn mellange"><span class="material-icons" style="font-size:18px;vertical-align:middle">auto_awesome</span>&nbsp;Start Room</button>
+      </div>
+      <div class="stack">
+        <input placeholder="Room name (optional)">
+        <div class="joinbar">
+          <input placeholder="Enter room code">
+          <button class="icon-btn" aria-label="Join"><span class="material-icons">arrow_forward</span></button>
+        </div>
+      </div>
+      <div class="credit">Credits: Horus Vision by Preetam Ahuja</div>
+    </div>
+  </div>
+</body>
+</html>
