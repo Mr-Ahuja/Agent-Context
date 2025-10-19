@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <style>
-    :root { --footer-h: 0px; }
+    :root { --vh: 1vh; }
     @import '../templates/The-Chosen-One/uiux/tokens.css';
-    html, body { height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: #f5f7fb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    html, body { height: 100%; margin: 0; background: var(--bg); color: #f5f7fb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     /* Horus-like dark gradient */
     body::before { content:""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(1200px 800px at 70% 20%, #152030 0%, #0b0f14 60%);
@@ -22,40 +22,50 @@
     a:hover { text-decoration: underline; }
 
     #constellation { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
-    .hero { position: relative; z-index: 1; height: calc(100svh - var(--footer-h)); min-height: calc(100vh - var(--footer-h)); display: grid; place-items: center; padding: 24px; box-sizing: border-box; }
+
+    /* Layout wrapper keeps footer at bottom and hero centered */
+    .page { min-height: calc(var(--vh) * 100); display: flex; flex-direction: column; }
+    .hero { flex: 1; display: grid; place-items: center; padding: 24px 16px; }
+
     .card { background: rgba(10,14,20,0.45); color: #f5f7fb; border: 1px solid #1f2a38; border-radius: 16px; backdrop-filter: blur(10px); padding: 22px; width: min(92vw, 860px); text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
     .logo { width: 64px; height: 64px; margin: 0 auto 8px; display: block; opacity: .95; }
     h1 { margin: 6px 0 8px; font-size: 30px; letter-spacing: .4px; }
     .lead { color: #cdd6e5; margin: 0 0 18px; }
-    .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 
-    /* Capsule buttons (Smart-URL SPA style) */
+    /* Capsule buttons */
     .btn { cursor: pointer; border: 1px solid #1e2733; background: #0f151d; color: #f5f7fb; padding: 10px 14px; border-radius: 999px; font-size: 15px; font-weight: 500; transition: background-color .15s ease, border-color .15s ease, filter .15s ease; display:inline-flex; align-items:center; gap:6px; text-decoration: none; }
     .btn:hover { border-color: #2a3545; background: #131b26; text-decoration: none; }
     .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
     .btn.mellange { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-color: #ffffff22; color: #0b0f14; }
     .btn.mellange:hover { filter: brightness(.96); }
 
-    .site-footer { position: fixed; left: 0; right: 0; bottom: 10px; text-align: center; color: var(--muted); font-size: 12px; z-index: 1; padding: 0 12px; }
+    .site-footer { color: var(--muted); font-size: 12px; text-align: center; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
   </style>
 </head>
 <body>
   <canvas id="constellation"></canvas>
-  <section class="hero">
-    <div class="card">
-      <img class="logo" src="assets/logo.svg" alt="Co-Frame logo" />
-      <h1>Co-Frame</h1>
-      <p class="lead">Context Framework • Template • Project — LLM‑ready design + dev governance for consistent apps.</p>
-      <div class="cta">
-        <a class="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?source=copy_link" target="_blank" rel="noopener"><span class="material-icons">category</span><span>Co‑Frame</span></a>
-        <a class="btn" href="https://github.com/Mr-Ahuja/Agent-Context" target="_blank" rel="noopener"><span class="material-icons-outlined">code</span><span>Repository</span></a>
-        <a class="btn" href="#" target="_blank" rel="noopener"><span class="material-icons-outlined">description</span><span>Paper</span></a>
+  <div class="page">
+    <section class="hero">
+      <div class="card">
+        <img class="logo" src="assets/logo.svg" alt="Co-Frame logo" />
+        <h1>Co-Frame</h1>
+        <p class="lead">Context Framework • Template • Project — LLM‑ready design + dev governance for consistent apps.</p>
+        <div class="cta">
+          <a class="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?source=copy_link" target="_blank" rel="noopener"><span class="material-icons">category</span><span>Co‑Frame</span></a>
+          <a class="btn" href="https://github.com/Mr-Ahuja/Agent-Context" target="_blank" rel="noopener"><span class="material-icons-outlined">code</span><span>Repository</span></a>
+          <a class="btn" href="#" target="_blank" rel="noopener"><span class="material-icons-outlined">description</span><span>Paper</span></a>
+        </div>
       </div>
-    </div>
-  </section>
-  <footer class="site-footer">Co-Frame by The Chosen One — <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
+    </section>
+    <footer class="site-footer">Co-Frame by The Chosen One — <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
+  </div>
 
   <script>
+    // Mobile viewport fix (consistent centering)
+    function setVh(){ document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px'); }
+    setVh(); window.addEventListener('resize', setVh); window.addEventListener('orientationchange', setVh);
+
     // Constellation animation (Horus-like)
     (function(){
       const canvas = document.getElementById('constellation');
@@ -92,10 +102,3 @@
   </script>
 </body>
 </html>
-
-<!-- redeploy 2025-10-19T17:42:07.1007153+05:30 -->
-
-
-
-
-
