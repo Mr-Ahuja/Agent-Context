@@ -21,8 +21,8 @@
     #constellation { position: fixed; inset: 0; width: 100vw; height: 100dvh; display: block; z-index: 0; }
 
     /* Layout wrapper keeps footer at bottom and hero centered */
-    .page { min-height: calc(var(--vh) * 100); display: grid; grid-template-rows: 1fr auto; }
-    .hero { display: grid; place-items: center; padding: 24px 16px; }
+    .page { min-height: calc(var(--vh) * 100); display: flex; flex-direction: column; }
+    .hero { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
 
     .card { background: rgba(10,14,20,0.35); color: #f5f7fb; border: 1px solid #223042; border-radius: 16px; backdrop-filter: blur(2px); padding: 22px; width: min(80vw, 860px); text-align: center; box-shadow: 0 12px 48px rgba(0,0,0,.38); }
     .logo { width: 64px; height: 64px; margin: 0 auto 8px; display: block; opacity: .95; }
@@ -108,6 +108,7 @@
 </html>
 
 <!-- redeploy 2025-10-19T17:56:07.1516810+05:30 -->
+
 
 
 
