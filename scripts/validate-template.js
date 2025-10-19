@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 function fail(m){ console.error('ERROR:', m); process.exitCode = 1; }
 function ok(m){ console.log('OK:', m); }
-function loadJson(p){ try{ return JSON.parse(fs.readFileSync(p,'utf8')); } catch(e){ fail('Cannot read JSON: ' + p + ' -> ' + e.message); return null; } }
+function loadJson(p){ try{ let s = fs.readFileSync(p,'utf8'); s = s.replace(/^\uFEFF/, ''); return JSON.parse(s); } catch(e){ fail('Cannot read JSON: ' + p + ' -> ' + e.message); return null; } } catch(e){ fail('Cannot read JSON: ' + p + ' -> ' + e.message); return null; } }
 (function(){
   const root = process.cwd();
   const schemaPath = path.resolve(root, 'schema/context.manifest.json');

@@ -1,12 +1,6 @@
-﻿name: Validate Templates
+name: Validate Templates
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
+on:\n  push:\n    branches: [ main ]\n    paths:\n      - 'templates/**'\n      - 'coframes/**'\n      - 'schema/**'\n      - 'shared/**'\n      - 'scripts/validate-template.js'\n      - 'package.json'\n  pull_request:\n    branches: [ main ]\n    paths:\n      - 'templates/**'\n      - 'coframes/**'\n      - 'schema/**'\n      - 'shared/**'\n      - 'scripts/validate-template.js'\n      - 'package.json'\n\njobs:
   validate:
     runs-on: ubuntu-latest
     steps:
