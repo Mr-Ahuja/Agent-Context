@@ -14,11 +14,7 @@
     *,*::before,*::after{ box-sizing: border-box; }
     :root { --vh: 1vh; }
     @import '../templates/The-Chosen-One/uiux/tokens.css';
-    html, body { height: 100%; margin: 0; background: var(--bg); color: #f5f7fb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    /* Horus-like dark gradient */
-    body::before { content:""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: radial-gradient(1200px 800px at 70% 20%, #152030 0%, #0b0f14 60%);
-    }
+    html, body { height: 100%; margin: 0; background: radial-gradient(1200px 800px at 70% 20%, #152030 0%, #0b0f14 60%); color: #f5f7fb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }  /* Horus-like dark gradient */
     a { color: var(--pink, #f9a8d4); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -72,10 +68,11 @@
       const canvas = document.getElementById('constellation');
       const ctx = canvas.getContext('2d');
       let pr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-      let w, h, pts = [], maxDist, count;
+            let w, h, pts = [], maxDist, count;
       function size(){
+        const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
         w = Math.max(1, Math.floor(window.innerWidth));
-        h = Math.max(1, Math.floor(window.innerHeight));
+        h = Math.max(1, Math.floor(vv));
         pr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
         canvas.width = Math.floor(w * pr); canvas.height = Math.floor(h * pr);
         ctx.setTransform(pr, 0, 0, pr, 0, 0);
@@ -105,6 +102,7 @@
 </html>
 
 <!-- redeploy 2025-10-19T17:56:07.1516810+05:30 -->
+
 
 
 
