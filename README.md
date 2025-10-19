@@ -1,5 +1,4 @@
-﻿# Agent-Context (Co-Frame • Template • Project)
-
+# Agent-Context (Co-Frame • Template • Project)\n\n[![Deploy Pages](https://github.com/Mr-Ahuja/Agent-Context/actions/workflows/pages.yml/badge.svg)](https://github.com/Mr-Ahuja/Agent-Context/actions/workflows/pages.yml)\n\n
 A pragmatic, LLM‑friendly way to standardize UI/UX and dev practices across apps. It encodes your design system and operating rules so future projects inherit the same aesthetic, structure, and deployment playbook — with room for small, safe overrides.
 
 ## What
@@ -99,3 +98,7 @@ A pragmatic, LLM‑friendly way to standardize UI/UX and dev practices across ap
 ### Template & Project Registration/Scaffold
 - Register template: npm run register:template -- --name "Template-Name" [--path templates/Template-Name/template.manifest.json]
 - Scaffold app (vanilla): npm run scaffold:project-app -- --project "My-Project" --template "The-Chosen-One"
+
+### Local Validation
+Run locally only: 
+pm run validate. CI validation is disabled by default and can be triggered manually via the 'Validate Templates' workflow.
