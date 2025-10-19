@@ -24,7 +24,7 @@
     .page { min-height: calc(var(--vh) * 100); display: grid; grid-template-rows: 1fr auto; }
     .hero { display: grid; place-items: center; padding: 24px 16px; }
 
-    .card { background: rgba(10,14,20,0.45); color: #f5f7fb; border: 1px solid #1f2a38; border-radius: 16px; backdrop-filter: blur(10px); padding: 22px; width: min(80vw, 860px); text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+    .card { background: rgba(10,14,20,0.35); color: #f5f7fb; border: 1px solid #223042; border-radius: 16px; backdrop-filter: blur(12px); padding: 22px; width: min(80vw, 860px); text-align: center; box-shadow: 0 12px 48px rgba(0,0,0,.38); }
     .logo { width: 64px; height: 64px; margin: 0 auto 8px; display: block; opacity: .95; }
     h1 { margin: 6px 0 8px; font-size: 30px; letter-spacing: .4px; }
     .lead { color: #cdd6e5; margin: 0 0 18px; }
@@ -39,7 +39,7 @@
 
     .site-footer { color: var(--muted); font-size: 12px; text-align: center; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
       @media (max-width: 600px) {
-      .card { min-height: 56vh; padding: 28px 18px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+      .card { background: rgba(10,14,20,0.35); color: #f5f7fb; border: 1px solid #223042; border-radius: 16px; backdrop-filter: blur(12px); padding: 28px 18px; width: min(80vw, 860px); text-align: center; box-shadow: 0 12px 48px rgba(0,0,0,.38); }
       .cta { gap: 12px; }
       h1 { font-size: 28px; margin: 8px 0 10px; }
       .lead { margin: 0 0 22px; line-height: 1.5; }
@@ -108,6 +108,7 @@
 </html>
 
 <!-- redeploy 2025-10-19T17:56:07.1516810+05:30 -->
+
 
 
 
