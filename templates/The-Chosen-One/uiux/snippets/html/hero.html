@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>@import '../../tokens.css'; html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}</style>
+</head>
+<body>
+  <canvas id="constellation"></canvas>
+  <section style="position:relative;z-index:1;height:100dvh;display:grid;place-items:center;padding:24px">
+    <div style="background:rgba(10,14,20,.45);border:1px solid #1f2a38;border-radius:16px;backdrop-filter:blur(10px);padding:24px;width:min(92vw,860px);text-align:center">
+      <h1 style="margin:0">The Chosen One</h1>
+      <p style="opacity:.8">Baseline aesthetic hero</p>
+    </div>
+  </section>
+  <script src="../../scripts/constellation.js"></script>
+</body>
+</html>
