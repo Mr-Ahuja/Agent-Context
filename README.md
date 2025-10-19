@@ -84,3 +84,9 @@ A pragmatic, LLM‑friendly way to standardize UI/UX and dev practices across ap
 - Add validation scripts (CI) to auto‑check Templates against the Co‑Frame manifest
 - Add a small CLI to scaffold Projects from Templates and write project manifests
 - Expand framework snippets (Next.js/Vite) and tokens.json usage in build systems
+
+## Create a New Framework (Co-Frame)
+- Process: coframes/PROCESS.md
+- Prompt: coframes/CONSTRUCTOR-PROMPT.md
+- After creation: register under schema/context.manifest.json and validate with npm run validate
+
