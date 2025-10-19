@@ -5,6 +5,8 @@
     "scripts":  {
                     "validate":  "node scripts/validate-template.js",
                     "new:coframe":  "node scripts/new-coframe.js",
-                    "register:coframe":  "node scripts/register-coframe.js"
+                    "register:coframe":  "node scripts/register-coframe.js",
+                    "scaffold:project-app":  "node scripts/scaffold-project-app.js",
+                    "register:template":  "node scripts/register-template.js"
                 }
 }

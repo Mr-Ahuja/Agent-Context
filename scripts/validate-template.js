@@ -20,7 +20,10 @@ function loadJson(p){ try{ return JSON.parse(readFileSync(p,'utf8')); } catch(e)
     const cf = loadJson(cfpath); if (!cf) continue; const requires = cf.requires || {}; const reqTpl = requires.template || []; const reqDev = requires.dev || [];
     for (const r of reqTpl){ const p = resolve(troot, r); if (!existsSync(p)) fail(Missing required template file: ); else ok(exists: ); }
     for (const r of reqDev){ const p = resolve(troot, r); if (!existsSync(p)) fail(Missing required dev file: ); else ok(exists: ); }
-    const entries = man.entries || {}; const must = { tokens: 'array', guidelines:'string', components:'string', patterns:'string' };
+    const entries = man.entries || {};
+    // Optional but recommended: MIGRATION.md
+    const mig = resolve(troot, 'MIGRATION.md');
+    if (!existsSync(mig)) ok('tip: MIGRATION.md not found (recommended)'); const must = { tokens: 'array', guidelines:'string', components:'string', patterns:'string' };
     for (const [k, typ] of Object.entries(must)){
       if (!(k in entries)) { fail(entries. missing); continue; }
       const v = entries[k];
@@ -29,4 +32,5 @@ function loadJson(p){ try{ return JSON.parse(readFileSync(p,'utf8')); } catch(e)
     }
   }
 })();
+
 

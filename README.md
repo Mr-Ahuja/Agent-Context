@@ -96,3 +96,6 @@ A pragmatic, LLM‑friendly way to standardize UI/UX and dev practices across ap
 ### Template & Project CLI
 - New template: npm run new:template -- --name "My-Template" --coframe "Project-Macro-Applications" [--from "The-Chosen-One"]
 - New project: npm run new:project -- --name "My-Project" --template "The-Chosen-One"
+### Template & Project Registration/Scaffold
+- Register template: npm run register:template -- --name "Template-Name" [--path templates/Template-Name/template.manifest.json]
+- Scaffold app (vanilla): npm run scaffold:project-app -- --project "My-Project" --template "The-Chosen-One"
