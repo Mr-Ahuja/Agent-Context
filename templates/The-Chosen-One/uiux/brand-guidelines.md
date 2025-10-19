@@ -1,4 +1,4 @@
-﻿# Aesthetics — Horus + CURLs
+﻿> Guidance, not a hard rule — use this template to steer decisions; dev/product context may adjust sizes/colors within reason.\n\n# Aesthetics — Horus + CURLs
 
 - Dark-first, elegant minimalism; glassy cards; capsule buttons.
 - Background radial gradient + constellation animation.
@@ -6,4 +6,5 @@
 - Light-pink links for highlights (CURLs).
 - Mobile-safe viewport (100dvh + --vh).
 - Footer fixed bottom, centered credit.
+
 

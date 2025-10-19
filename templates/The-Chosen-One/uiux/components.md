@@ -7,3 +7,4 @@ Footer: fixed bottom centered; credit with link on name only.
 Link: color var(--pink); underline on hover (not on buttons).
 Toast: pill, blur, border #1f2a38, text #e6eef8.
 
+\n\n## Slim Capsule Variant\n- Padding: 10px 14px; min-height ~40px; font-weight 500; gap ~6px.\n- Outlined default on dark: bg #0f151d, border #1e2733; hover bg #131b26.\n- Primary (accent fill) and Mellange CTA (gradient) allowed for emphasis.\n- Icon-first: small Material icon (18px) before label; accessible text follows.\n
