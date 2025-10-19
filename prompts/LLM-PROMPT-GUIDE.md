@@ -1,6 +1,6 @@
 ﻿# LLM Prompt Guide
 
-When asking an LLM to design/build UI, provide:
+When asking an LLM to design/build UI, provide (and specify the project preference):
 
 Must include
 - projects/The-Chosen-One/brand-guidelines.md
@@ -19,3 +19,5 @@ Prompt pattern
 - \
 
 
+
+Constructor prompt available at frameworks/constructor/CONSTRUCTOR-PROMPT.md.
