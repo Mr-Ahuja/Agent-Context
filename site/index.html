@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <style>
     @import '../templates/The-Chosen-One/uiux/tokens.css';
     html, body { height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: #f5f7fb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
@@ -25,16 +27,16 @@
     h1 { margin: 6px 0 8px; font-size: 30px; letter-spacing: .4px; }
     .lead { color: #cdd6e5; margin: 0 0 10px; }
     .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+
+    /* Capsule buttons (Smart-URL SPA style) */
     .btn { cursor: pointer; border: 1px solid #1e2733; background: #0f151d; color: #f5f7fb; padding: 12px 16px; border-radius: 999px; font-size: 15px; font-weight: 600; transition: background-color .15s ease, border-color .15s ease, filter .15s ease; display:inline-flex; align-items:center; gap:8px; min-height: 44px; text-decoration: none; }
     .btn:hover { border-color: #2a3545; background: #131b26; text-decoration: none; }
     .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .site-footer { position: fixed; left: 0; right: 0; bottom: 10px; text-align: center; color: var(--muted); font-size: 12px; z-index: 1; padding: 0 12px; }
-      
-    `n    .btn.mellange { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-color: #ffffff22; color: #0b0f14; }
+    .btn.mellange { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-color: #ffffff22; color: #0b0f14; }
     .btn.mellange:hover { filter: brightness(.96); }
-</style>
-  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>
+
+    .site-footer { position: fixed; left: 0; right: 0; bottom: 10px; text-align: center; color: var(--muted); font-size: 12px; z-index: 1; padding: 0 12px; }
+  </style>
 </head>
 <body>
   <canvas id="constellation"></canvas>
@@ -43,12 +45,11 @@
       <img class="logo" src="assets/logo.svg" alt="Co-Frame logo" />
       <h1>Co-Frame</h1>
       <p class="lead">Context Framework • Template • Project — LLM‑ready design + dev governance for consistent apps.</p>
-            <div class='cta'>
-        <a class='linkbtn gradient' href='https://preetam.thechosenone.in/' target='_blank' rel='noopener'><span class='material-icons'>person</span><span>Visit Profile</span></a>
-        <a class='linkbtn' href='mailto:preetam@thechosenone.in'><span class='material-icons'>mail</span><span>Email Support</span></a>
-        <a class='linkbtn' href='https://github.com/Mr-Ahuja/Agent-Context/issues' target='_blank' rel='noopener'><span class='material-icons'>bug_report</span><span>GitHub Issues</span></a>
+      <div class="cta">
+        <a class="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?source=copy_link" target="_blank" rel="noopener"><span class="material-icons">category</span><span>Co‑Frame</span></a>
+        <a class="btn" href="https://github.com/Mr-Ahuja/Agent-Context" target="_blank" rel="noopener"><span class="material-icons-outlined">code</span><span>Repository</span></a>
+        <a class="btn" href="#" target="_blank" rel="noopener"><span class="material-icons-outlined">description</span><span>Paper</span></a>
       </div>
-
     </div>
   </section>
   <footer class="site-footer">Co-Frame by The Chosen One — <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
@@ -90,7 +91,3 @@
   </script>
 </body>
 </html>
-
-
-
-
