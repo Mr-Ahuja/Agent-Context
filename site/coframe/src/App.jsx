@@ -46,7 +46,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="site-footer">Co-Frame by The Chosen One  <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
+      <footer className="site-footer">Co-Frame by The Chosen One <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
     </div>
   )
 }
