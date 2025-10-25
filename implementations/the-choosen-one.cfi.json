@@ -10,6 +10,7 @@
   "ui.footer.attribution": "project_by_preetam",
   "ui.buttons.style": "mellange",
   "ui.responsive.policy": "mobile_first",
+  "ui.buttons.icons": "enabled",
   "runtime.commands": {
     "install": "cd site/coframe && pnpm i",
     "build": "cd site/coframe && pnpm build",

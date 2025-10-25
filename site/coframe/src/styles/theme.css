@@ -48,6 +48,8 @@ body {
   min-height: 44px;
   text-decoration: none !important;
 }
+.btn .icon { width: 18px; height: 18px; display: inline-block; fill: currentColor; }
+.btn .icon svg { width: 18px; height: 18px; display: block; }
 .btn:hover { border-color: #2a3647; background: #121a24; }
 .btn:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
 .btn.mellange {
@@ -72,6 +74,20 @@ body {
   backdrop-filter: saturate(180%) blur(14px);
 }
 .panel { padding: 20px 24px; margin: 18px 0; }
+
+/* Card (glass) */
+.card {
+  background: rgba(10, 14, 20, 0.35);
+  color: #f5f7fb;
+  border: 1px solid #223042;
+  border-radius: 16px;
+  backdrop-filter: blur(2px);
+  padding: 22px;
+  width: min(80vw, 860px);
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, .38);
+  margin: 18px auto;
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

@@ -74,6 +74,19 @@
         "failure_policy": "continue_with_warning"
       }
     }
+    ,
+    "ui.buttons.icons": {
+      "desc": "Buttons include leading icons as part of the design language.",
+      "protocol": {
+        "preconditions": [],
+        "actions": [],
+        "postconditions": [
+          "ASSERT: primary and secondary buttons render a leading icon",
+          "ASSERT: icons inherit currentColor and align vertically"
+        ],
+        "failure_policy": "continue_with_warning"
+      }
+    }
   },
   "operators": {
     "op.ui.starry": {
