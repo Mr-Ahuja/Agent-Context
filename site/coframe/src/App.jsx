@@ -29,15 +29,15 @@ export default function App() {
           <h1 className="title">Co-Frame</h1>
           <p className="desc">Context Framework • Template • Project  LLM‑ready design + dev governance for consistent apps.</p>
           <div className="cta">
-            <a className="btn btn-lg mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?pvs=74" target="_blank" rel="noopener" aria-label="Co-Frame">
+            <a className="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?pvs=74" target="_blank" rel="noopener" aria-label="Co-Frame">
               <span className="material-icons" aria-hidden="true">category</span>
               <span>Co‑Frame</span>
             </a>
-            <a className="btn btn-lg" href="https://github.com/Mr-Ahuja/Agent-Context" target="_blank" rel="noopener" aria-label="Repository">
+            <a className="btn" href="https://github.com/Mr-Ahuja/Agent-Context" target="_blank" rel="noopener" aria-label="Repository">
               <span className="material-icons-outlined" aria-hidden="true">code</span>
               <span>Repository</span>
             </a>
-            <a className="btn btn-lg" href="../../README.md" target="_blank" rel="noopener" aria-label="How to use">
+            <a className="btn" href="../../README.md" target="_blank" rel="noopener" aria-label="How to use">
               <span className="material-icons-outlined" aria-hidden="true">description</span>
               <span>How to use</span>
             </a>
