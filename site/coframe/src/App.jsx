@@ -27,7 +27,8 @@ export default function App() {
         <div className="card">
           <img className="logo" src="/logo.svg" alt="Co-Frame logo" />
           <h1 className="title">Co-Frame</h1>
-          <p className="desc">Context Framework • Template • Project  LLM‑ready design + dev governance for consistent apps.</p>
+          <p className="lead"><strong>Context Framework • Template • Project</strong></p>
+          <p className="sublead">LLM‑ready design + dev governance for consistent apps.</p>
           <div className="cta">
             <a className="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?pvs=74" target="_blank" rel="noopener" aria-label="Co-Frame">
               <span className="material-icons" aria-hidden="true">category</span>
