@@ -29,9 +29,8 @@ export default function App() {
         <p className="tag">Context Framework • Template • Project</p>
         <p className="desc">LLM‑ready design + dev governance for consistent apps.</p>
         <div className="cta">
-          <a className="btn primary" href="../../coframe/semantics.base.json" target="_blank" rel="noreferrer">Semantics</a>
-          <a className="btn secondary" href="../../templates/spa.the-choosen-one.cft.json" target="_blank" rel="noreferrer">Template</a>
-          <a className="btn ghost" href="../../implementations/the-choosen-one.cfi.json" target="_blank" rel="noreferrer">Implementation</a>
+          <a className="btn btn-lg primary" href="../../templates/spa.the-choosen-one.cft.json" target="_blank" rel="noreferrer">Use the Template</a>
+          <a className="btn btn-lg outline" href="../../implementations/the-choosen-one.cfi.json" target="_blank" rel="noreferrer">View Implementation</a>
         </div>
       </header>
 
@@ -52,13 +51,8 @@ export default function App() {
             <img className="foot-logo" src="/logo.svg" alt="co-frame" width="28" height="28" />
             <span>co-frame</span>
           </div>
-          <nav className="foot-nav">
-            <a href="../../coframe/semantics.base.json" target="_blank" rel="noreferrer">Semantics</a>
-            <a href="../../templates/spa.the-choosen-one.cft.json" target="_blank" rel="noreferrer">Template</a>
-            <a href="../../implementations/the-choosen-one.cfi.json" target="_blank" rel="noreferrer">Implementation</a>
-          </nav>
           <div className="foot-copy">
-            © {new Date().getFullYear()} co-frame • All rights reserved
+            co-frame by The Chosen One <a className="author" href="https://github.com/Mr-Ahuja" target="_blank" rel="noreferrer">Preetam Ahuja</a>
           </div>
         </div>
       </footer>

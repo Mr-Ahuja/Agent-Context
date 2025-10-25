@@ -30,7 +30,8 @@ body {
 .desc { margin: 8px 0 0; color: var(--muted); }
 
 .cta { margin-top: 24px; display: inline-flex; gap: 12px; justify-content: center; flex-wrap: wrap; align-items: center; }
-.cta .btn { min-width: 140px; }
+.cta .btn { min-width: 160px; }
+.btn-lg { padding: 13px 18px; font-size: 15px; border-radius: 999px; }
 .btn {
   appearance: none; border: 1px solid rgba(255,255,255,0.1);
   background: linear-gradient(#1a2231, #121822);
@@ -40,7 +41,7 @@ body {
 .btn:hover { border-color: rgba(255,255,255,0.25); box-shadow: 0 8px 28px rgba(0,0,0,0.45); }
 .btn:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
 .btn.primary { background: linear-gradient(180deg, var(--accent), #3ea3d3); color: #0b0f14; font-weight: 700; }
-.btn.secondary { background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03)); color: var(--fg); border-color: rgba(255,255,255,0.2); }
+.btn.secondary, .btn.outline { background: rgba(255,255,255,0.02); color: var(--fg); border-color: rgba(255,255,255,0.32); }
 .btn.ghost { background: transparent; border-color: rgba(255,255,255,0.18); color: var(--muted); }
 
 .content { max-width: 960px; margin: 0 auto; padding: 16px 24px 56px; }
@@ -48,12 +49,11 @@ body {
 .content ul { margin: 8px 0 0 20px; color: var(--fg); }
 
 .foot { color: var(--muted); padding: 20px 16px; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(11,15,20,0.85); backdrop-filter: saturate(160%) blur(10px); }
-.foot-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; }
+.foot-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; }
 .foot-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--fg); font-weight: 600; }
-.foot-nav { display: inline-flex; gap: 16px; justify-content: center; }
-.foot-nav a { color: var(--muted); text-decoration: none; }
-.foot-nav a:hover { color: var(--fg); }
-.foot-copy { text-align: right; }
+.foot-copy { text-align: right; color: var(--muted); }
+.foot-copy .author { color: var(--accent-2); text-decoration: none; }
+.foot-copy .author:hover { color: var(--accent); text-decoration: underline; }
 
 /* Glassmorphism panels */
 .glass { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));

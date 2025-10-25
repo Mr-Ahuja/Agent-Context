@@ -6,6 +6,8 @@
   "build.strategy": "react_vite",
   "deploy.strategy": "github_actions_pages",
   "ui.theme": "the_choosen_one",
+  "ui.buttons.layout": "primary_secondary_inline",
+  "ui.footer.attribution": "project_by_preetam",
   "runtime.commands": {
     "install": "cd site/coframe && pnpm i",
     "build": "cd site/coframe && pnpm build",

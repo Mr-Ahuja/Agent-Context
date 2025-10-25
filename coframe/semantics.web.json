@@ -26,6 +26,31 @@
         "failure_policy": "continue_with_warning"
       }
     }
+    ,
+    "ui.footer.attribution": {
+      "desc": "Footer attribution content and link policy.",
+      "protocol": {
+        "preconditions": [],
+        "actions": [],
+        "postconditions": [
+          "ASSERT: attribution text present",
+          "ASSERT: link target is accessible and descriptive"
+        ],
+        "failure_policy": "continue_with_warning"
+      }
+    },
+    "ui.buttons.layout": {
+      "desc": "Layout pattern for primary and secondary hero buttons.",
+      "protocol": {
+        "preconditions": [],
+        "actions": [],
+        "postconditions": [
+          "ASSERT: primary button visually dominant",
+          "ASSERT: spacing/tap targets meet guidelines"
+        ],
+        "failure_policy": "continue_with_warning"
+      }
+    }
   },
   "operators": {
     "op.ui.starry": {
