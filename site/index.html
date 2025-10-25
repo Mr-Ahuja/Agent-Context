@@ -1,119 +1,14 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Co-Frame • Agent-Context</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <style>
-    *,*::before,*::after{ box-sizing: border-box; }
-    :root { --vh: 1vh; }
-    @import '../templates/The-Chosen-One/uiux/tokens.css';
-    html, body { height: 100%; margin: 0; background: radial-gradient(1200px 800px at 70% 20%, #152030 0%, #0b0f14 60%); color: #f5f7fb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; overscroll-behavior: none; }  /* Horus-like dark gradient */
-    a { color: var(--pink, #f9a8d4); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    #constellation { position: fixed; inset: 0; width: 100vw; height: 100dvh; display: block; z-index: 0; }
-
-    /* Layout wrapper keeps footer at bottom and hero centered */
-    .page { min-height: calc(var(--vh) * 100); display: flex; flex-direction: column; }
-    .hero { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
-
-    .card { background: rgba(10,14,20,0.35); color: #f5f7fb; border: 1px solid #223042; border-radius: 16px; backdrop-filter: blur(2px); padding: 22px; width: min(80vw, 860px); text-align: center; box-shadow: 0 12px 48px rgba(0,0,0,.38); }
-    .logo { width: 64px; height: 64px; margin: 0 auto 8px; display: block; opacity: .95; }
-    h1 { margin: 6px 0 8px; font-size: 30px; letter-spacing: .4px; }
-    .lead { color: #cdd6e5; margin: 0 0 18px; }
-    .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-
-    /* Capsule buttons */
-    .btn { cursor: pointer; border: 1px solid #1e2733; background: #0f151d; color: #f5f7fb; padding: 10px 14px; border-radius: 999px; font-size: 15px; font-weight: 500; transition: background-color .15s ease, border-color .15s ease, filter .15s ease; display:inline-flex; align-items:center; gap:6px; text-decoration: none; }
-    .btn:hover { border-color: #2a3545; background: #131b26; text-decoration: none; }
-    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .btn.mellange { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-color: #ffffff22; color: #0b0f14; }
-    .btn.mellange:hover { filter: brightness(.96); }
-
-    .site-footer { color: var(--muted); font-size: 12px; text-align: center; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
-      @media (max-width: 600px) {
-      .card { background: rgba(10,14,20,0.35); color: #f5f7fb; border: 1px solid #223042; border-radius: 16px; backdrop-filter: blur(2px); padding: 28px 18px; width: min(80vw, 860px); text-align: center; box-shadow: 0 12px 48px rgba(0,0,0,.38); }
-      .cta { gap: 12px; }
-      h1 { font-size: 28px; margin: 8px 0 10px; }
-      .lead { margin: 0 0 22px; line-height: 1.5; }
-      .btn { padding: 12px 16px; font-size: 15px; gap: 8px; }
-    }</style>
-</head>
-<body>
-  <canvas id="constellation"></canvas>
-  <div class="page">
-    <section class="hero">
-      <div class="card">
-        <img class="logo" src="assets/logo.svg" alt="Co-Frame logo" />
-        <h1>Co-Frame</h1>
-        <p class="lead">Context Framework • Template • Project — LLM‑ready design + dev governance for consistent apps.</p>
-        <div class="cta">
-          <a class="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?source=copy_link" target="_blank" rel="noopener"><span class="material-icons">category</span><span>Co‑Frame</span></a>
-          <a class="btn" href="https://github.com/Mr-Ahuja/Agent-Context" target="_blank" rel="noopener"><span class="material-icons-outlined">code</span><span>Repository</span></a>
-          <a class="btn" href="#" target="_blank" rel="noopener"><span class="material-icons-outlined">description</span><span>Paper</span></a>
-        </div>
-      </div>
-    </section>
-    <footer class="site-footer">Co-Frame by The Chosen One — <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
-  </div>
-
-  <script>
-    // Mobile viewport fix (consistent centering)
-    function setVh(){ document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px'); }
-    setVh(); window.addEventListener('resize', setVh); window.addEventListener('orientationchange', setVh);
-
-    // Constellation animation (Horus-like)
-    (function(){
-      const canvas = document.getElementById('constellation');
-      const ctx = canvas.getContext('2d');
-      let pr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-            let w, h, pts = [], maxDist, count;
-      function size(){
-        const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
-        w = Math.max(1, Math.floor(window.innerWidth));
-        h = Math.max(1, Math.floor(vv));
-        pr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-        canvas.width = Math.floor(w * pr); canvas.height = Math.floor(h * pr);
-        ctx.setTransform(pr, 0, 0, pr, 0, 0);
-        const area = w*h; count = Math.max(60, Math.min(160, Math.floor(area/14000)));
-        maxDist = Math.max(80, Math.min(180, Math.sqrt(area)/6));
-        pts = Array.from({length: count}, () => ({ x: Math.random()*w, y: Math.random()*h, vx:(Math.random()-.5)*.4, vy:(Math.random()-.5)*.4, r: Math.random()*1.2 + .4 }));
-      }
-      function step(){
-        ctx.clearRect(0,0,w,h);
-        for (let i=0;i<pts.length;i++){
-          const p=pts[i]; p.x+=p.vx; p.y+=p.vy; if (p.x<0||p.x>w) p.vx*=-1; if (p.y<0||p.y>h) p.vy*=-1;
-          ctx.globalAlpha=.85; ctx.fillStyle='#e6eef8'; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
-          for (let j=i+1;j<pts.length && j<i+35;j++){
-            const q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d2=dx*dx+dy*dy; if (d2<maxDist*maxDist){
-              const a=1-(Math.sqrt(d2)/maxDist); ctx.globalAlpha=Math.min(.6,a*.8);
-              ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--line') || '#1f2a3833';
-              ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke();
-            }
-          }
-        }
-        ctx.globalAlpha=1; requestAnimationFrame(step);
-      }
-      size(); step(); window.addEventListener('resize', size); window.addEventListener('orientationchange', size);
-    })();
-  </script>
-</body>
-</html>
-
-<!-- redeploy 2025-10-19T17:56:07.1516810+05:30 -->
-
-
-
-
-
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Context Framework • Template • Project — LLM‑ready design + dev governance for consistent apps." />
+    <title>CoFrame • Context Framework • Template • Project</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  </html>
 

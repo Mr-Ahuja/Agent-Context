@@ -1,6 +1,0 @@
-{
-  "name": "Project-Macro-Applications",
-  "version": "1.0.0",
-  "requires": {"template":["template.manifest.json","uiux/tokens.css","uiux/brand-guidelines.md","uiux/components.md","uiux/patterns.md"],"dev":["dev/deployment.md","dev/git.md","dev/ci.md"]},
-  "validation": {"mustInclude":["uiux/tokens.css","uiux/brand-guidelines.md"],"denyOverrides":["uiux/components.md"],"allowedOverrides":["uiux/tokens.css"]}
-}
