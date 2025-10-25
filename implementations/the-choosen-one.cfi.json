@@ -1,0 +1,27 @@
+{
+  "implements": "templates/spa.the-choosen-one.cft.json#1.0.0",
+  "name": "the-choosen-one",
+  "version": "1.0.0",
+  "app.framework": "react",
+  "build.strategy": "react_vite",
+  "deploy.strategy": "git_cli_pages",
+  "ui.theme": "the_choosen_one",
+  "runtime.commands": {
+    "install": "cd site/coframe && pnpm i",
+    "build": "cd site/coframe && pnpm build",
+    "dev": "cd site/coframe && pnpm dev",
+    "test": "cd site/coframe && pnpm test",
+    "lint": "cd site/coframe && pnpm lint"
+  },
+  "artifact.patterns": ["site/coframe/dist/**"],
+  "params": {
+    "op.deploy.git.pages": { "branch": "gh-pages", "path": "site/coframe/dist", "keep_history": true }
+  },
+  "provenance": {
+    "source": "Mr-Ahuja/Horus and Smart-URL-Chrome-Extention (design/build parity)",
+    "version": "1.0.0",
+    "date": "2025-10-25",
+    "note": "Shared SPA look & feel; CLI deploy to GitHub Pages."
+  },
+  "why": "Unify design language and deployment flow across similar SPAs using Vite build and Git CLI Pages publishing."
+}
