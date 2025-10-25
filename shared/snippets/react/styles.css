@@ -1,9 +1,0 @@
-﻿/* shared token usage for snippets */
-:root{ --bg:#0b0f14; --panel:#121821; --text:#e6eef8; --muted:#95a3b8; --accent:#2e8cff; --line:#1f2a3833 }
-.app-bg{ background: radial-gradient(1200px 800px at 70% 20%, #152030 0%, #0b0f14 60%); min-height:100dvh; color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif }
-.card{ background: rgba(10,14,20,.45); border:1px solid #1f2a38; border-radius:16px; backdrop-filter: blur(10px); padding: 16px }
-.btn{ cursor:pointer; border:1px solid #1e2733; background:#0f151d; color:var(--text); padding:10px 14px; border-radius:999px; display:inline-flex; align-items:center; gap:8px }
-.btn:hover{ border-color:#2a3545; background:#131b26 }
-.btn.primary{ background: var(--accent); border-color: var(--accent); color:#fff }
-.hero{ min-height: 60vh; display:grid; place-items:center; text-align:center; padding: 24px }
-
