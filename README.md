@@ -37,3 +37,6 @@ Propose a New Template Value
 More
 - Maintainer notes and versioning policy live in `CONSTRUCTOR.md`.
 
+Helpers (for models/agents)
+- Constructor helper: `docs/helpers/CONSTRUCTOR_HELPER.md` — how to assemble/update Semantics, Templates, and Implementations safely.
+- README helper: `docs/helpers/README_HELPER.md` — how to explain CoFrame and guide contributors to add an Implementation.
