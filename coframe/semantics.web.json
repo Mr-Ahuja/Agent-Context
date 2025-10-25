@@ -25,8 +25,7 @@
         ],
         "failure_policy": "continue_with_warning"
       }
-    }
-    ,
+    },
     "ui.footer.attribution": {
       "desc": "Footer attribution content and link policy.",
       "protocol": {
@@ -50,6 +49,30 @@
         ],
         "failure_policy": "continue_with_warning"
       }
+    },
+    "ui.buttons.style": {
+      "desc": "Visual style for primary/secondary buttons.",
+      "protocol": {
+        "preconditions": [],
+        "actions": [],
+        "postconditions": [
+          "ASSERT: primary style applied (e.g., mellange gradient)",
+          "ASSERT: secondary uses base button styling"
+        ],
+        "failure_policy": "continue_with_warning"
+      }
+    },
+    "ui.responsive.policy": {
+      "desc": "Responsiveness policy; enforce mobile-friendly behavior.",
+      "protocol": {
+        "preconditions": [],
+        "actions": [],
+        "postconditions": [
+          "ASSERT: layout stacks CTA on narrow widths",
+          "ASSERT: tap targets >= 44px and viewport meta present"
+        ],
+        "failure_policy": "continue_with_warning"
+      }
     }
   },
   "operators": {
@@ -63,8 +86,7 @@
         "Reference star field asset or CSS gradient",
         "Verify contrast and scroll performance"
       ]
-    }
-    ,
+    },
     "op.ui.theme.the_choosen_one": {
       "desc": "Apply the 'the-choosen-one' theme (shared look & feel).",
       "assumptions": [

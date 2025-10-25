@@ -8,6 +8,8 @@
   "ui.theme": "the_choosen_one",
   "ui.buttons.layout": "primary_secondary_inline",
   "ui.footer.attribution": "project_by_preetam",
+  "ui.buttons.style": "mellange",
+  "ui.responsive.policy": "mobile_first",
   "runtime.commands": {
     "install": "cd site/coframe && pnpm i",
     "build": "cd site/coframe && pnpm build",

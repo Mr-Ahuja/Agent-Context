@@ -45,17 +45,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="foot">
-        <div className="foot-inner">
-          <div className="foot-brand">
-            <img className="foot-logo" src="/logo.svg" alt="co-frame" width="28" height="28" />
-            <span>co-frame</span>
-          </div>
-          <div className="foot-copy">
-            co-frame by The Chosen One <a className="author" href="https://github.com/Mr-Ahuja" target="_blank" rel="noreferrer">Preetam Ahuja</a>
-          </div>
-        </div>
-      </footer>
+      <footer className="site-footer">CURLs by The Chosen One - <a href="https://preetam.thechosenone.in/" target="_blank" rel="noopener">Preetam Ahuja</a></footer>
     </div>
   )
 }

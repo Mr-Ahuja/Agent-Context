@@ -18,6 +18,8 @@
       }
     },
     "ui.theme": { "enum": ["the_choosen_one"] },
+    "ui.buttons.style": { "enum": ["mellange"] },
+    "ui.responsive.policy": { "enum": ["mobile_first"] },
     "ui.buttons.layout": { "enum": ["primary_secondary_inline"] },
     "ui.footer.attribution": { "enum": ["project_by_preetam"] },
     "runtime.commands": { "type": "object" },
@@ -26,7 +28,9 @@
   "defaults": {
     "artifact.patterns": ["dist/**"],
     "ui.buttons.layout": "primary_secondary_inline",
-    "ui.footer.attribution": "project_by_preetam"
+    "ui.footer.attribution": "project_by_preetam",
+    "ui.buttons.style": "mellange",
+    "ui.responsive.policy": "mobile_first"
   },
   "notes": [
     "Locked to a shared design language across SPAs (the-choosen-one).",
