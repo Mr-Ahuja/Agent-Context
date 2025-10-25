@@ -41,7 +41,13 @@ function copyDir(src, dest) {
 }
 
 // 1) Build the site
-run('pnpm build', siteDir)
+try {
+  run('pnpm --version')
+  run('pnpm build', siteDir)
+} catch {
+  // Fallback to npm if pnpm is not available
+  run('npm run build', siteDir)
+}
 
 // 2) Prepare worktree
 try { run('git rev-parse --is-inside-work-tree', repoRoot) } catch {
@@ -77,4 +83,3 @@ try {
 }
 
 console.log(`Published to ${branch}. Configure GitHub Pages to serve from that branch.`)
-
