@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "app.framework": "react",
   "build.strategy": "react_vite",
-  "deploy.strategy": "git_cli_pages",
+  "deploy.strategy": "github_actions_pages",
   "ui.theme": "the_choosen_one",
   "runtime.commands": {
     "install": "cd site/coframe && pnpm i",
@@ -15,7 +15,11 @@
   },
   "artifact.patterns": ["site/coframe/dist/**"],
   "params": {
-    "op.deploy.git.pages": { "branch": "gh-pages", "path": "site/coframe/dist", "keep_history": true }
+    "op.deploy.gha.pages": {
+      "working_dir": "site/coframe",
+      "artifact_path": "site/coframe/dist",
+      "node_version": "20"
+    }
   },
   "provenance": {
     "source": "Mr-Ahuja/Horus and Smart-URL-Chrome-Extention (design/build parity)",

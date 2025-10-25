@@ -11,8 +11,9 @@
       }
     },
     "deploy.strategy": {
-      "enum": ["git_cli_pages"],
+      "enum": ["github_actions_pages", "git_cli_pages"],
       "bindings": {
+        "github_actions_pages": { "operator": "op.deploy.gha.pages" },
         "git_cli_pages": { "operator": "op.deploy.git.pages" }
       }
     },
@@ -28,4 +29,3 @@
     "Build via Vite, publish to GitHub Pages using Git CLI (gh-pages)."
   ]
 }
-
