@@ -11,6 +11,9 @@
   "ui.buttons.style": "mellange",
   "ui.responsive.policy": "mobile_first",
   "ui.buttons.icons": "enabled",
+  "ui.logo.size": { "width": 64, "height": 64 },
+  "ui.assets.scripts": ["site/coframe/src/lib/constellation.js"],
+  "ui.assets.styles": ["site/coframe/src/styles/theme.css"],
   "runtime.commands": {
     "install": "cd site/coframe && pnpm i",
     "build": "cd site/coframe && pnpm build",
