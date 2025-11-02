@@ -30,7 +30,7 @@ export default function App() {
           <p className="lead"><strong>Context Framework • Template • Project</strong></p>
           <p className="sublead">LLM‑ready design + dev governance for consistent apps.</p>
           <div className="cta">
-            <a className="btn mellange" href="https://chatter-painter-59e.notion.site/Co-Frame-2916391f0f4580889e55f1082b90bc63?pvs=74" target="_blank" rel="noopener" aria-label="Co-Frame">
+            <a className="btn mellange" href="https://preetamahuja.notion.site/CoFrame-Agent-Context-A-Repository-Local-Governance-Framework-Research-Overview-682a733ead8d4363873d236cc9fe510a" target="_blank" rel="noopener" aria-label="Co-Frame">
               <span className="material-icons" aria-hidden="true">category</span>
               <span>Co‑Frame</span>
             </a>
